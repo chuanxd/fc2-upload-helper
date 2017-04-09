@@ -1,0 +1,24 @@
+{
+  "description": "A Chrome Extension for Fc2 Video upload helper.",
+  "manifest_version": 2,
+  "name": "FC2 Upload Helper",
+  "version": "0.1.0",
+
+  "author": "Timmy Chang",
+
+  "background": {
+    "scripts": []
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://converter.video.fc2.com/upcontent_up.php"],
+      "css": ["style.css"],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ]
+}
